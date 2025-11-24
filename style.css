@@ -45,6 +45,7 @@ p {
 /*! header start*/
 .header {
   border-bottom: 1px solid #dee0ea; /* kenarlığın:  genişliği stili rengi*/
+  position: relative;
 }
 .global-notificition {
   background-color: #1367ef;
@@ -149,6 +150,7 @@ header .menu-dropdown-wrapper {
   left: -30px; /* -dersek sağdan sola kayar, - demezsek soldan sağa kayar*/
   opacity: 0; /*mouse üzerinde değilse görünmesin*/
   visibility: hidden; /*sadece menu yazısının üstüne gelince gözükecek*/
+  transition: all 0.2s ease; /*all: tüm css özelliklerine geçiş yaptır*/
 }
 header .menu-dropdown-content {
   width: 220px;
@@ -162,14 +164,68 @@ header .menu-dropdown-content a {
   display: flex;
   padding: 4px 30px;
   font-size: 14px;
-  transition: all 0.2s ease; /*all: tüm css özelliklerine geçiş yaptır*/
+  transition: color 0.2s ease;
 }
 header .menu-dropdown-content a:hover {
   color: #1367ef; /*tema sayfasında sağ tık incele dediğimizde :hov tık orda hover ı işaretle, yazılan css gözükücek*/
 }
-.header-center .menu-list .menu-list-item:hover .menu-dropdown-wrapper{
-opacity: 1; /*mouse üzerine geldiğinde gözükecek*/
-visibility: visible; /*sadece menu yazısının üstüne gelince gözükecek*/
+.header-center .menu-list .menu-list-item:hover .menu-dropdown-wrapper {
+  opacity: 1; /*mouse üzerine geldiğinde gözükecek*/
+  visibility: visible; /*sadece menu yazısının üstüne gelince gözükecek*/
+}
+.menu-dropdown-megamenu {
+  background-color: white;
+  border: 1px solid #dee0ea;
+  padding: 22px;
+  display: flex;
+  column-gap: 50px;
+}
+
+.megamenu-wrapper .menu-dropdown-wrapper {
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.megamenu-wrapper {
+  position: static !important;
+}
+
+.megamenu-wrapper .megamenu-links {
+  display: flex;
+  column-gap: 50px;
+}
+
+.megamenu-wrapper .megamenu-products-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.megamenu-wrapper .megamenu-menu-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2px;
+}
+
+.megamenu-wrapper .megamenu-menu-list a {
+  font-size: 14px;
+}
+
+.megamenu-wrapper .megamenu-single-title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.megamenu-wrapper .megamenu-single-subtitle {
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.megamenu-wrapper .megamenu-single-button {
+  margin-top: 5px;
 }
 /*? menu dropdown end */
 /*! header end*/
