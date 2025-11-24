@@ -1,0 +1,175 @@
+/*FONT EKLEME*/
+/*google fontsa girip aramaya 'jost' yazdı, altta çıkana tıkladı, sağ üstte get fonta tıkladı, ardından
+get embed code tık, solda change styles tık, çıkan seçeneklerde istediklerimi seçtik
+sağda link değil import seçili olacak. style i almadan @importtan itibaren kopyaladı*/
+/*! base start*/
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  /* yıldız tüm etiketleri kapsar*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jost", sans-serif; /*font url si alırken aşağıda font family nin kullanımı gösterilmiş, ordan aldık*/
+} /*tarayıcıda sağ tık incele dediğimizde yazının üstüne imleç ile gelindiğinde padding margin tablosu çıktı, onları sıfırladık*/
+
+ul,
+ol {
+  /*tüm bu etiketlerde geçerli*/
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+/*! base end*/
+
+.container {
+  max-width: 1200px;
+  width: 100%; /*1200 px içinde 100% alan kapla*/
+  margin: 0 auto; /*sağdan soldan ortala*/
+}
+
+/*! header start*/
+.header {
+  border-bottom: 1px solid #dee0ea; /* kenarlığın:  genişliği stili rengi*/
+}
+.global-notificition {
+  background-color: #1367ef;
+  padding: 14px 0; /*yukardan aşağı 14px, sağdan soldan 0*/
+  text-align: center; /*yazı ortalandı*/
+  font-size: 12px;
+  color: white;
+}
+.global-notificition a {
+  color: white; /*a etiketi en yukarıda siyah renk yapıldığı için burda ayrıca beyaz yapıp yukardaki özelliği ezdik */
+  font-weight: 600;
+}
+
+.header-row {
+  height: 90px;
+  display: flex;
+  align-items: center;
+}
+.header-wrapper {
+  display: flex; /*yan yana gelecekler*/
+  justify-content: space-between; /*sağlı sollu hizalandı*/
+  align-items: center; /*yukardan aşağı ortaladı*/
+}
+.header-left .logo {
+  font-size: 24px;
+  font-weight: 500;
+  display: flex;
+}
+.header-center .navigation .menu-list {
+  display: flex;
+  column-gap: 30px; /*.menu listin kapsadığı colonlar birbirinden uzaklaşıyor*/
+  align-items: center; /*dikeyde hizala*/
+}
+.header-center .menu-list .menu-list-item {
+  display: flex; /*menu-list-item classlı i ve içindeki a aynı yükseklikte olması için*/
+  align-items: center;
+  position: relative; /*.menu-dropdown-wrapper kısmını hapsetmesi için*/
+  height: 90px;
+}
+.header-center .menu-list .menu-link {
+  font-size: 14px;
+  font-weight: 500; /*harf kalınlığı*/
+  text-transform: uppercase; /*bütün harfleri büyük harf yaptı*/
+  letter-spacing: 1.2px; /*harflerin aralarını açtı*/
+  position: relative;
+}
+
+.header-center .menu-list .menu-link::after {
+  content: "";
+  width: 0;
+  height: 1px;
+  background-color: #1367ef;
+  position: absolute; /*yukarıda kapsayıcısına relative vermemiz gerekir (.header-center .menu-list .menu-link)*/
+  bottom: -2px; /*bottom altındaki divden yukarı çıkartmayı sağlar, biz - değer verirsek aşağı inmiş olur*/
+  left: 50%;
+  transform: translate(-50%); /*ortaladı*/
+  transition: 0.2s ease width; /*geçişli yaptı*/
+}
+.header-center .menu-list .menu-list-item:hover .menu-link::after {
+  width: 100%; /*yukarda 0 değerini verdik, hover olduğunda yani mouse üstüne geldiğinde 100% olsun yani görülsün, hover değilken görülmesin 0 olsun */
+}
+.header-center .menu-list .menu-link.active::after {
+  width: 100%; /*menu-link active ise*/
+}
+.header-center .menu-list i {
+  font-size: 12px;
+}
+.header-right .header-right-links {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+}
+.header-right .bi-person {
+  font-size: 23px;
+}
+.header-right .toggle-button {
+  border: none;
+  background-color: transparent;
+}
+.header-right .header-cart {
+  position: relative; /*kafesle*/
+}
+.header-right .header-cart-link .header-cart-count {
+  width: 16px;
+  height: 16px;
+  background-color: #1367ef;
+  color: white;
+  font-size: 10px;
+  border-radius: 100%; /*yuvarlaştırdı*/
+  position: absolute; /*eksenden çıkar*/
+  top: -10px; /*yukarıya al*/
+  right: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+/*? menu dropdown start */
+header .menu-dropdown-wrapper {
+  position: absolute; /*kapsayıcısına relative vermemiz lazım (.menu-list-item)*/
+  top: 100%;
+  left: -30px; /* -dersek sağdan sola kayar, - demezsek soldan sağa kayar*/
+  opacity: 0; /*mouse üzerinde değilse görünmesin*/
+  visibility: hidden; /*sadece menu yazısının üstüne gelince gözükecek*/
+}
+header .menu-dropdown-content {
+  width: 220px;
+  background-color: #fff;
+  border: 1px solid #dee0ea;
+  display: flex;
+  flex-direction: column;
+  padding: 18px 0;
+}
+header .menu-dropdown-content a {
+  display: flex;
+  padding: 4px 30px;
+  font-size: 14px;
+  transition: all 0.2s ease; /*all: tüm css özelliklerine geçiş yaptır*/
+}
+header .menu-dropdown-content a:hover {
+  color: #1367ef; /*tema sayfasında sağ tık incele dediğimizde :hov tık orda hover ı işaretle, yazılan css gözükücek*/
+}
+.header-center .menu-list .menu-list-item:hover .menu-dropdown-wrapper{
+opacity: 1; /*mouse üzerine geldiğinde gözükecek*/
+visibility: visible; /*sadece menu yazısının üstüne gelince gözükecek*/
+}
+/*? menu dropdown end */
+/*! header end*/
