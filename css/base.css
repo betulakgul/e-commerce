@@ -1,0 +1,33 @@
+/*! base start*/
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  /* yıldız tüm etiketleri kapsar*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jost", sans-serif; /*font url si alırken aşağıda font family nin kullanımı gösterilmiş, ordan aldık*/
+} /*tarayıcıda sağ tık incele dediğimizde yazının üstüne imleç ile gelindiğinde padding margin tablosu çıktı, onları sıfırladık*/
+
+ul,
+ol {
+  /*tüm bu etiketlerde geçerli*/
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+/*! base end*/
