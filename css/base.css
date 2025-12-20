@@ -1,3 +1,8 @@
+/*FONT EKLEME*/
+/*google fontsa girip aramaya 'jost' yazdı, altta çıkana tıkladı, sağ üstte get fonta tıkladı, ardından
+get embed code tık, solda change styles tık, çıkan seçeneklerde istediklerimi seçtik
+sağda link değil import seçili olacak. style i almadan @importtan itibaren kopyaladı*/
+
 /*! base start*/
 @import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
 * {
@@ -30,4 +35,91 @@ h6,
 p {
   margin: 0;
 }
+.container {
+  max-width: 1200px;
+  width: 100%; /*1200 px içinde 100% alan kapla*/
+  margin: 0 auto; /*sağdan soldan ortala*/
+}
+.logo {
+  font-size: 24px;
+  font-weight: 500;
+  display: flex;
+}
+button {
+  cursor: pointer;
+  border: none;
+}
+.btn {
+  display: inline-block;
+  padding: 0 25px;
+  line-height: 40px;
+  font-weight: 500;
+  border: 1px solid black;
+  transition: 0.2s ease all;
+}
+.btn-sm {
+  line-height: 33px;
+}
+.btn-lg {
+  line-height: 45px;
+}
+
+.btn-primary {
+  background-color: #1367ef;
+  color: #fff;
+  border-color: #1367ef;
+}
+.btn-primary:hover {
+  background-color: #fff;
+  color: #1367ef;
+}
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"] {
+  outline: none;
+  border: 1px solid #dee0ea;
+  padding: 8px 8px 8px 15px; /*yukardan sağdan aşağıdan soldan*/
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus {
+  border-color: gray;
+}
+input[type="number"]::-webkit-inner-spin-button {
+  /*numberlı imputun yanındaki yukarı aşağı ok hover olmayınca da hep gmrünsün*/
+  opacity: 1;
+}
 /*! base end*/
+
+/*! responsive*/
+@media (max-width: 1200px) {
+  .container {
+    max-width: 992px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 576px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 420px) {
+  .container {
+    max-width: 350px;
+  }
+}

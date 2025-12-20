@@ -194,3 +194,40 @@ header .menu-dropdown-content a:hover {
 
 /*? menu dropdown end */
 /*! header end*/
+
+/*! header responsive*/
+@media (max-width: 650px) {
+  .header-center {
+    position: fixed; /*scrolla beraber gelir*/
+    top: 0;
+    left: -100%; /*sola sakladık*/
+    height: 100vh;
+    background-color: #fff;
+    border-right: 1px solid #dee0ea;
+  }
+  .header-center .bi-x-circle {
+    display: inline-block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .header-center .menu-list {
+    flex-direction: column;
+    padding: 50px 75px;
+  }
+
+  .header-mobile {
+    display: inline-block;
+  }
+  header .menu-dropdown-wrapper{
+    display: none !important;
+  }
+  header .menu-list i{
+    display: none;
+  }
+  header .menu-list-item a{
+    font-size: 16px !important;
+  }
+}
