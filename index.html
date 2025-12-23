@@ -18,11 +18,13 @@
     <!--! header start  -->
     <header>
       <div class="global-notificition">
-        <p>
+        <div class="container"> <!--container içine alarak responsive de yazıyı sıkıştırmamış olduk-->
+          <p>
           SUMMER SALE FOR ALL SWIM SUITS AND FREE EXPRESS INTERNATIONAL DELIVERY
           - OFF 50%!
           <a href="shop.html">SHOP NOW</a>
         </p>
+        </div>
       </div>
       <div class="header-row">
         <div class="container">
@@ -221,9 +223,12 @@
     <div class="modal-search">
       <div class="modal-wrapper">
         <h3 class="modal-title">Search for products</h3>
-        <p class="modal-text">Start typing to see products you are looking for.</p> <!-- p. yazıp entere basarsan classı p hazır gelir-->
+        <p class="modal-text">
+          Start typing to see products you are looking for.
+        </p>
+        <!-- p. yazıp entere basarsan classı p hazır gelir-->
         <form class="search-form">
-          <input type="text" placeholder="Search a product">
+          <input type="text" placeholder="Search a product" />
           <button>
             <i class="bi bi-search"></i>
           </button>
@@ -234,7 +239,11 @@
           </div>
           <div class="results">
             <a href="#" class="result-item">
-              <img src="img/products/product1/1.png" class="search-thumb" alt="">
+              <img
+                src="img/products/product1/1.png"
+                class="search-thumb"
+                alt=""
+              />
               <div class="search-info">
                 <h4>Analogue Resin Strap</h4>
                 <span class="search-sku">SKU: PD0016</span>
@@ -242,7 +251,11 @@
               </div>
             </a>
             <a href="#" class="result-item">
-              <img src="img/products/product2/1.png" class="search-thumb" alt="">
+              <img
+                src="img/products/product2/1.png"
+                class="search-thumb"
+                alt=""
+              />
               <div class="search-info">
                 <h4>Analogue Resin Strap</h4>
                 <span class="search-sku">SKU: PD0016</span>
@@ -255,5 +268,92 @@
       </div>
     </div>
     <!--! modal search end-->
+
+    <!--! slider start-->
+    <section class="slider">
+      <!--div olarak da yazabilirdik, seo için section kullandık-->
+      <div class="slider-elements">
+        <div class="slider-item">
+          <div class="slider-image">
+            <img src="img/slider/slider1.jpg" class="img-fluid" alt="" />
+          </div>
+          <div class="container">
+            <p class="slider-title">SUMMER 2022</p>
+            <h2 class="slider-heading">Save up to 70%</h2>
+            <a href="#" class="btn btn-lg btn-primary">Explore Now</a>
+          </div>
+        </div>
+        <div class="slider-buttons">
+          <button>
+            <i class="bi bi-chevron-left"></i>
+          </button>
+          <button>
+            <i class="bi bi-chevron-right"></i>
+          </button>
+        </div>
+        <div class="slider-dots">
+          <button class="slider-dot">
+            <span></span>
+          </button>
+          <button class="slider-dot">
+            <span></span>
+          </button>
+          <button class="slider-dot">
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!--! slider end-->
+
+    <!--! categories start--> 
+    <section class="categories">
+      <div class="container">
+        <div class="section-title">
+          <h2>All Categories</h2>
+          <p>Summer Collection New Morden Design</p>
+        </div>
+        <ul class="category-list">
+          <li class="category-item">
+            <a href="#">
+              <img src="img/categories/categories1.png" alt="" class="category-image">
+              <span class="category-title">Smartphone</span>
+            </a>
+          </li>
+          <li class="category-item">
+            <a href="#">
+              <img src="img/categories/categories2.png" alt="" class="category-image">
+              <span class="category-title">Watches</span>
+            </a>
+          </li>
+          <li class="category-item">
+            <a href="#">
+              <img src="img/categories/categories3.png" alt="" class="category-image">
+              <span class="category-title">Electronics</span>
+            </a>
+          </li>
+          <li class="category-item">
+            <a href="#">
+              <img src="img/categories/categories4.png" alt="" class="category-image">
+              <span class="category-title">Furnitures</span>
+            </a>
+          </li>
+          <li class="category-item">
+            <a href="#">
+              <img src="img/categories/categories5.png" alt="" class="category-image">
+              <span class="category-title">Collections</span>
+            </a>
+          </li>
+          <li class="category-item">
+            <a href="#">
+              <img src="img/categories/categories6.png" alt="" class="category-image">
+              <span class="category-title">Fashion</span>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+    <!--! categories end-->
   </body>
 </html>

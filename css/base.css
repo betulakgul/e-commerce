@@ -12,7 +12,9 @@ sağda link değil import seçili olacak. style i almadan @importtan itibaren ko
   box-sizing: border-box;
   font-family: "Jost", sans-serif; /*font url si alırken aşağıda font family nin kullanımı gösterilmiş, ordan aldık*/
 } /*tarayıcıda sağ tık incele dediğimizde yazının üstüne imleç ile gelindiğinde padding margin tablosu çıktı, onları sıfırladık*/
-
+body{
+  overflow-x: hidden; /*x ekseninde scroll açma, sığamayan aşağı taşacak*/
+}
 ul,
 ol {
   /*tüm bu etiketlerde geçerli*/
@@ -90,6 +92,10 @@ input[type="number"]:focus {
 input[type="number"]::-webkit-inner-spin-button {
   /*numberlı imputun yanındaki yukarı aşağı ok hover olmayınca da hep gmrünsün*/
   opacity: 1;
+}
+
+.img-fluid{
+  width: 100%;
 }
 /*! base end*/
 

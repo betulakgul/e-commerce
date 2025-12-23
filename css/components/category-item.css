@@ -1,0 +1,27 @@
+.categories .category-item{
+background-color: #f5f5f5;
+border-radius: 4px;
+flex: 1; /*hepsini eşit genişlik kaplayacak şekilde yay*/
+width: 100%;
+display: flex;
+justify-content: center;
+}
+.categories .category-item a{
+    display: inline-block; /*bunu yazmazsak padding işlemez*/
+    padding: 10px; /*padding verdik çünkü resmin kendi arkaplan rengi de olduğu için 
+    resmin üzerine geldiğinde yakınlaştırdığımızda sanki bütün resim değil de sadece resimdeki nesne yakınlaşıyor 
+    gibi olması için resmin tamamını padding vererek küçülttük, yukarda aynı renk arka plan rengi verdik*/
+    text-align: center;
+    margin: 5px 0; /*sadece yukardan aşağı boşluk yap, soldan sağa 0 boşluk*/
+    font-size: 14px;
+    font-weight: 500;
+
+}
+.categories .category-item .category-image{
+    width: 100%;
+    transition: transform ease .2s;
+    
+}
+.categories .category-item .category-image:hover{
+transform: scale(1.1); /*mouse üzerine gelince yakınlaş*/
+}
