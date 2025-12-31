@@ -1,0 +1,39 @@
+.campaigns .campaign-item {
+  padding: 70px 35px;
+  background-size: cover;
+  background-position: center;
+  flex: 1; /*eşitledi*/
+  color: white;
+}
+.campaigns .campaign-item .campaign-title {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 30px;
+}
+.campaigns .campaign-item .campaign-desc {
+    margin: 40px 0;
+    font-size: 14px;
+}
+.campaigns-wrapper:nth-child(1) .campaign-item:nth-child(1){  /*1. wrapperin 1. itemini seçtik*/
+  background-image: url(../../img/campaigns/banner1.png); /*img klasörüne ulaşmak için 2 kere ../ yazarak 2 kere bir üst menüden çıkmış olduk*/
+}
+.campaigns-wrapper:nth-child(1) .campaign-item:nth-child(2){ 
+  background-image: url(../../img/campaigns/banner2.png); 
+}
+.campaigns-wrapper:nth-child(2) .campaign-item:nth-child(1){  
+  background-image: url(../../img/campaigns/banner3.png); 
+  flex: 5;
+}
+.campaigns-wrapper:nth-child(2) .campaign-item:nth-child(2){  
+  background-image: url(../../img/campaigns/banner4.png); 
+  flex: 3; /*bir üstteki flex değeriyle bu değerin arasındaki fark ne kadar açılırsa, boyut farkları o kadar artar*/
+}
+
+@media (max-width: 768px){
+    .campaigns .campaign-item{
+        width: 100%;
+        flex: unset !important; /*responsivede itemlerin sıkışmaması için, burada flex i unset ile yok ettik  */
+        /*nth-child da farklı flex değerleri de kullandığımız için flex unset e important verdik ki tüm flexlere uygulasın*/
+    }
+}
+

@@ -29,3 +29,13 @@
     flex-wrap: wrap; /*sayfaya sığmayan aşağı taşsın, burada responsive ayarına gerek kalmadı*/
 }
 /*! products end */
+
+/*! campaign start */
+.campaigns .campaigns-wrapper{
+    display: flex;
+    gap: 30px; /*hem yatayda hem dikeyde 30px, responsivde tekrar ayarlama yapma gereği duymamak için gap olarak ayarladık, yoksa normalde column-gap yapardık*/
+    margin-top: 30px;
+    flex-wrap: wrap; /*itemlerin sıkışmaması için*/
+  
+}
+/*! campaign end */
