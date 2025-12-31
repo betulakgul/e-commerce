@@ -27,6 +27,10 @@
     font-size: 60px;
     font-weight: 600; /*kalınlık*/
 }
+.slider-item a{ /*butonun üstüne gelince tıklanabilir olması için*/
+    position: relative; /*z-index yapısının işlemesi için*/
+    z-index: 1; /*üstte görünür yapmak için*/
+}
 .slider .slider-buttons{
     position: absolute; /*butona absolute dememiz için kapsayıcısı slider a relative dememiz lazım (yukarda)*/
     top: 0;

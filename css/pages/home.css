@@ -18,3 +18,14 @@
     flex-wrap: wrap; /*sayfaya sığmayan aşağı taşsın, burada responsive ayarına gerek kalmadı*/
 }
 /*! categories end */
+
+/*! products start */
+.products{
+    margin-bottom: 40px;
+}
+.products .product-list{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /*sayfaya sığmayan aşağı taşsın, burada responsive ayarına gerek kalmadı*/
+}
+/*! products end */
