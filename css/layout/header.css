@@ -114,6 +114,7 @@ header .menu-dropdown-wrapper {
   opacity: 0; /*mouse üzerinde değilse görünmesin*/
   visibility: hidden; /*sadece menu yazısının üstüne gelince gözükecek*/
   transition: all 0.2s ease; /*all: tüm css özelliklerine geçiş yaptır*/
+  z-index: 1; /*menünün sayfanın önüne geçmesi için*/
 }
 header .menu-dropdown-content {
   width: 220px;
