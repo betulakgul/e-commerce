@@ -1,0 +1,58 @@
+GİT KURULUM
+https://www.youtube.com/watch?v=dbW91xEbKtU&t=624s
+
+git config --global user.email "betul.akgul44@gmail.com"
+git config --global user.name "betulakgul"
+
+
+kod düzenleyici ->prettier - code formatter yükledikten sonra
+kodda sağ tık format document with ->üstte configure defaukl format -> prettier - code formatter tıkla
+artık default olarak bu format yüklendi
+sonra visualde sol altta ayarlarda settings e girip aramaya default yazıp ->editor:format on save i işaretle
+artık projeyi her ctrl+s yaptığında kodlar otomatik düzenlenecek 
+
+file kısmında auto save işaretli olsun
+
+VISUAL E YÜKLENEN UZANTILAR
+Auto Rename Tag
+Better Comments
+Color Highlight
+CSS Peek
+ES7+ React/Redux/React-Native snippets
+ESLint
+Live Server
+Path Intellisense
+Prettier - Code formatter
+px to rem & rpx & vw (cssrem)
+Tailwind CSS IntelliSense  
+
+html tasarım:
+themeforest.net
+arama kısmına -> e commerce in html yaz
+
+eklenen linkler
+https://fonts.google.com/
+https://icons.getbootstrap.com/
+
+GOOGLE E EKLENEN UZANTILAR
+mobile simulator
+https://chromewebstore.google.com/detail/mobile-simulator-responsi/ckejmhbmlajgoklhgbapkiccekfoccmk
+(google de uzantılara tık -> uzantıları yönet -> mobil telefon simulatörünün ayrıntılarına tıkla -> Dosya URL'lerine erişime izin ver)
+
+color
+https://chromewebstore.google.com/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp?hl=tr
+
+dimensions
+https://chromewebstore.google.com/detail/dimensions/baocaagndhipibgklemoalmkljaimfdj/related
+(uzantıyı yönet -> Dosya URL'lerine erişime izin ver)
+
+LİVE SERVER
+uzantıyı visuale ekledikten sonra mesela index.html sağ tık ->open with live server yapmamız lazım
+yoksa javasicript çalışmaz hata verir
+
+ÖNERİLER
+ürün sepete eklendi diye uyarı gelsin
+
+PAZARLAMA
+responsive var, cart kısmında scroll var
+ceo için h1 etiketi kullanımı
