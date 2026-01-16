@@ -5,7 +5,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>E-Commerce</title>
+    <title>Blog</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
@@ -180,10 +180,16 @@
                     </div>
                   </li>
                   <li class="menu-list-item">
-                    <a href="blog.html" class="menu-link">Blog </a>
+                    <a href="blog.html" class="menu-link"
+                      >Blog
+                      
+                    </a>
                   </li>
                   <li class="menu-list-item">
-                    <a href="contact.html" class="menu-link">Contact </a>
+                    <a href="contact.html" class="menu-link"
+                      >Contact
+                      
+                    </a>
                   </li>
                 </ul>
               </nav>
@@ -264,396 +270,127 @@
     </div>
     <!--! modal search end-->
 
-    <!--! single product start-->
-    <section class="single-product">
+    <!--! blogs start-->
+    <section class="blogs blog-page">
       <div class="container">
-        <div class="single-product-wrapper">
-          <!--breadcrumb start-->
-          <div class="single-topbar">
-            <nav>
-              <div class="breadcrumb">
-                <ul>
-                  <li><a href="">Home</a></li>
-                  <li><a href="">Man</a></li>
-                  <li><a href="">Pants</a></li>
-                  <li>Basic Colored Sweatpants With Elastic Hems</li>
-                </ul>
+        <div class="section-title">
+          <h2>From Our Blog</h2>
+          <p>Summer Collection New Morden Design</p>
+        </div>
+        <ul class="blog-list">
+          <li class="blog-item">
+            <a href="#" class="blog-image">
+              <img src="img/blogs/blog1.jpg" alt="" />
+            </a>
+            <div class="blog-info">
+              <div class="blog-info-top">
+                <span>25 Feb, 2021 </span>
+                -
+                <span>0 Comments</span>
               </div>
-            </nav>
-            <!--yönlendirme link var o yüzden nav kullandık-->
-          </div>
-          <!--breadcrumb end-->
-
-          <!-- site main start-->
-          <div class="single-content">
-            <main class="site-main">
-              <!--içerik kısmı olduğu için main-->
-              <div class="product-gallery">
-                <div class="single-image-wrapper">
-                  <img src="img/products/product2/1.png" alt="" />
-                </div>
-                <div class="product-thumb">
-                  <ol class="gallery-thumbs">
-                    <li>
-                      <img
-                        src="img/products/product2/1.png"
-                        alt=""
-                        class="img-fluid active"
-                      />
-                      <!--img-fluid eklediğimizde width:100%; ve height:auto olur-->
-                    </li>
-                    <li>
-                      <img
-                        src="img/products/product2/2.png"
-                        alt=""
-                        class="img-fluid"
-                      />
-                    </li>
-                    <li>
-                      <img
-                        src="img/products/product2/3.png"
-                        alt=""
-                        class="img-fluid"
-                      />
-                    </li>
-                  </ol>
-                </div>
+              <div class="blog-info-center">
+                <a href="#">Aliquam hendrerit mi metus</a>
               </div>
-              <div class="product-info">
-                <h1 class="product-title">Ridley High Waist</h1>
-                <!--ceo için h1, aramalarda çıkması için-->
-                <div class="product-review">
-                  <ul class="product-star">
-                    <li><i class="bi bi-star-fill"></i></li>
-                    <li><i class="bi bi-star-fill"></i></li>
-                    <li><i class="bi bi-star-fill"></i></li>
-                    <li><i class="bi bi-star-fill"></i></li>
-                    <li><i class="bi bi-star-half"></i></li>
-                  </ul>
-                  <span>2 reviews</span>
-                </div>
-                <div class="product-prices">
-                  <s>$208.00</s>
-                  <strong>$100.00</strong>
-                </div>
-                <p class="product-description">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-                <form class="variations-form">
-                  <div class="variations">
-                    <div class="colors">
-                      <div class="colors-label">
-                        <span>Color</span>
-                      </div>
-                      <div class="colors-wrapper">
-                        <div class="color-wrapper">
-                          <label class="blue-color">
-                            <input type="radio" name="product-color" />
-                          </label>
-                        </div>
-                        <div class="color-wrapper">
-                          <label class="red-color">
-                            <input type="radio" name="product-color" />
-                          </label>
-                        </div>
-                        <div class="color-wrapper active">
-                          <label class="green-color">
-                            <input type="radio" name="product-color" />
-                            <!--radio butonların hepsine aynı name veririz çünkü
-                            radio buton da tek bir tane seçim yapılabilir, farklı name verirsek birden fazla seçime izin
-                            verir bu da radio butona aykırı bişey-->
-                          </label>
-                        </div>
-                        <div class="color-wrapper">
-                          <label class="purple-color">
-                            <input type="radio" name="product-color" />
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="values">
-                      <div class="values-label">
-                        <span>Size</span>
-                      </div>
-                      <div class="values-list">
-                        <span class="active">XS</span>
-                        <span>S</span>
-                        <span>M</span>
-                        <span>L</span>
-                        <span>XL</span>
-                      </div>
-                    </div>
-                    <div class="cart-button">
-                      <input type="number" value="1" min="1" />
-                      <button class="btn btn-lg btn-primary">
-                        Add to cart
-                      </button>
-                    </div>
-                    <div class="product-extra-buttons">
-                      <a href="">
-                        <i class="bi bi-globe"></i>
-                        <span>Size Guide</span>
-                      </a>
-                      <a href="">
-                        <i class="bi bi-heart"></i>
-                        <span>Add to Wislist</span>
-                      </a>
-                      <a href="">
-                        <i class="bi bi-share"></i>
-                        <span>Share this Product</span>
-                      </a>
-                    </div>
-                  </div>
-                </form>
-                <div class="divider"></div>
-                <div class="product-meta">
-                  <div class="product-sku">
-                    <span>SKU:</span>
-                    <strong>BE45VGRT</strong>
-                  </div>
-                  <div class="product-categories">
-                    <span>Categories:</span>
-                    <strong>Pants , Women</strong>
-                  </div>
-                  <div class="product-tags">
-                    <span>Tags:</span>
-                    <a href="">black</a>
-                    ,
-                    <a href="">white</a>
-                  </div>
-                </div>
-              </div>
-            </main>
-          </div>
-          <!-- site main end-->
-
-          <!-- tabs start-->
-          <div class="single-tabs">
-            <ul class="tab-list">
-              <li>
-                <a href="" class="tab-button active">Description</a>
-              </li>
-              <li>
-                <a href="" class="tab-button">Additional information</a>
-              </li>
-              <li>
-                <a href="" class="tab-button">Reviews</a>
-              </li>
-            </ul>
-            <div class="tab-panel">
-              <div class="tab-panel-descriptions">
-                <p>
-                  Quisque varius diam vel metus mattis, id aliquam diam rhoncus.
-                  Proin vitae magna in dui finibus malesuada et at nulla. Morbi
-                  elit ex, viverra vitae ante vel, blandit feugiat ligula. Fusce
-                  fermentum iaculis nibh, at sodales leo maximus a. Nullam
-                  ultricies sodales nunc, in pellentesque lorem mattis quis.
-                  Cras imperdiet est in nunc tristique lacinia. Nullam aliquam
-                  mauris eu accumsan tincidunt. Suspendisse velit ex, aliquet
-                  vel ornare vel, dignissim a tortor.
-                </p>
-                <br />
-                <p>
-                  Quisque varius diam vel metus mattis, id aliquam diam rhoncus.
-                  Proin vitae magna in dui finibus malesuada et at nulla. Morbi
-                  elit ex, viverra vitae ante vel, blandit feugiat ligula. Fusce
-                  fermentum iaculis nibh, at sodales leo maximus a. Nullam
-                  ultricies sodales nunc, in pellentesque lorem mattis quis.
-                  Cras imperdiet est in nunc tristique lacinia. Nullam aliquam
-                  mauris eu accumsan tincidunt. Suspendisse velit ex, aliquet
-                  vel ornare vel, dignissim a tortor.
-                </p>
-              </div>
-              <div class="tab-panel-information">
-                <h3>Additional information</h3>
-                <table>
-                  <tbody>
-                    <tr>
-                      <th>Color</th>
-                      <!--başlık-->
-                      <td>
-                        <!--içerik-->
-                        <p>
-                          Apple Red, Bio Blue, Sweet Orange, Blue, Green, Pink,
-                          Black, White
-                        </p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>Size</th>
-                      <td>
-                        <p>XXS, XS, S, M, L, XL, XXL</p>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="tab-panel-reviews">
-                <h3>
-                  2 reviews for Basic Colored Sweatpants With Elastic Hems
-                </h3>
-                <div class="comments">
-                  <ol class="comment-list">
-                    <li class="comment-item">
-                      <div class="comment-avatar">
-                        <img src="img/avatars/avatar1.jpg" alt="" />
-                      </div>
-                      <div class="comment-text">
-                        <ul class="comment-star">
-                          <li>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                          </li>
-                        </ul>
-                        <div class="comment-meta">
-                          <strong>admin</strong>
-                          <span>-</span>
-                          <time>April 23, 2022</time>
-                        </div>
-                        <div class="comment-description">
-                          <p>
-                            Sed perspiciatis unde omnis iste natus error sit
-                            voluptatem accusantium doloremque laudantium.
-                          </p>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="comment-item">
-                      <div class="comment-avatar">
-                        <img src="img/avatars/avatar1.jpg" alt="" />
-                      </div>
-                      <div class="comment-text">
-                        <ul class="comment-star">
-                          <li>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                          </li>
-                        </ul>
-                        <div class="comment-meta">
-                          <strong>admin</strong>
-                          <span>-</span>
-                          <time>April 23, 2022</time>
-                        </div>
-                        <div class="comment-description">
-                          <p>
-                            Sed perspiciatis unde omnis iste natus error sit
-                            voluptatem accusantium doloremque laudantium.
-                          </p>
-                        </div>
-                      </div>
-                    </li>
-                  </ol>
-                </div>
-                <!-- comment form start-->
-                 <div class="review-form-wrapper">
-                  <h2>Add a review</h2>
-                  <form class="comment-form">
-                    <p class="commnet-notes">Your email address will not be published. Required fields are marked 
-                      <span class="required">*</span></p>
-                      <div class="comment-form-rating">
-                        <label>
-                          Your rating
-                          <span class="required">*</span>
-                        </label>
-                        <div class="stars">
-                          <a href="" class="star">
-                            <i class="bi bi-star-fill"></i>
-                          </a>
-                          <a href="" class="star">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                          </a>
-                          <a href="" class="star">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                          </a>
-                          <a href="" class="star">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                          </a>
-                           <a href="" class="star">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                          </a>
-                        </div>
-                      </div>
-                      <div class="comment-form-comment form-comment">
-                        <label for="comment">
-                          Your review 
-                          <span class="required">*</span>
-                        </label>
-                        <textarea id="comment" cols="50" rows="10"></textarea>
-                      </div>
-                      <div class="comment-form-author form-comment">
-                        <label for="name">
-                          Name 
-                          <span class="required">*</span>
-                        </label>
-                        <input id="name" type="text">
-                      </div>
-                      <div class="comment-form-email form-comment">
-                        <label for="email">
-                          Email 
-                          <span class="required">*</span>
-                        </label>
-                        <input id="email" type="email">
-                      </div>
-                      <div class="comment-form-cookies">
-                        <input id="cookies" type="checkbox">
-                        <label for="cookies">
-                          Save my name, email, and website in this browser for the next time I comment.  
-                          <span class="required">*</span>
-                        </label>
-                        
-                      </div>
-                      <div class="form-submit">
-                        <input type="submit" class="btn submit"> <!--input ile de buton yapabilirz-->
-                        <!--butonda yazılan yazıyı değiştirmek istersek value="" veririz-->
-                      </div>
-                  </form>
-                 </div>
-                <!-- comment form end-->
+              <div class="blog-info-bottom">
+                <a href="#">Read More</a>
               </div>
             </div>
-          </div>
-          <!-- tabs end-->
-        </div>
+          </li>
+          <li class="blog-item">
+            <a href="#" class="blog-image">
+              <img src="img/blogs/blog2.jpg" alt="" />
+            </a>
+            <div class="blog-info">
+              <div class="blog-info-top">
+                <span>25 Feb, 2021 </span>
+                -
+                <span>0 Comments</span>
+              </div>
+              <div class="blog-info-center">
+                <a href="#">Aliquam hendrerit mi metus</a>
+              </div>
+              <div class="blog-info-bottom">
+                <a href="#">Read More</a>
+              </div>
+            </div>
+          </li>
+          <li class="blog-item">
+            <a href="#" class="blog-image">
+              <img src="img/blogs/blog3.jpg" alt="" />
+            </a>
+            <div class="blog-info">
+              <div class="blog-info-top">
+                <span>25 Feb, 2021 </span>
+                -
+                <span>0 Comments</span>
+              </div>
+              <div class="blog-info-center">
+                <a href="#">Aliquam hendrerit mi metus</a>
+              </div>
+              <div class="blog-info-bottom">
+                <a href="#">Read More</a>
+              </div>
+            </div>
+          </li>
+          <li class="blog-item">
+            <a href="#" class="blog-image">
+              <img src="img/blogs/blog4.jpg" alt="" />
+            </a>
+            <div class="blog-info">
+              <div class="blog-info-top">
+                <span>25 Feb, 2021 </span>
+                -
+                <span>0 Comments</span>
+              </div>
+              <div class="blog-info-center">
+                <a href="#">Aliquam hendrerit mi metus</a>
+              </div>
+              <div class="blog-info-bottom">
+                <a href="#">Read More</a>
+              </div>
+            </div>
+          </li>
+          <li class="blog-item">
+            <a href="#" class="blog-image">
+              <img src="img/blogs/blog5.jpg" alt="" />
+            </a>
+            <div class="blog-info">
+              <div class="blog-info-top">
+                <span>25 Feb, 2021 </span>
+                -
+                <span>0 Comments</span>
+              </div>
+              <div class="blog-info-center">
+                <a href="#">Aliquam hendrerit mi metus</a>
+              </div>
+              <div class="blog-info-bottom">
+                <a href="#">Read More</a>
+              </div>
+            </div>
+          </li>
+          <li class="blog-item">
+            <a href="#" class="blog-image">
+              <img src="img/blogs/blog6.jpg" alt="" />
+            </a>
+            <div class="blog-info">
+              <div class="blog-info-top">
+                <span>25 Feb, 2021 </span>
+                -
+                <span>0 Comments</span>
+              </div>
+              <div class="blog-info-center">
+                <a href="#">Aliquam hendrerit mi metus</a>
+              </div>
+              <div class="blog-info-bottom">
+                <a href="#">Read More</a>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
 
-    <!--! single product end-->
-
-  
-    <!--! campaign single start-->
-
-    <section class="campaign-single">
-      <div class="container">
-        <div class="campaign-wrapper">
-          <h2>New Season Sale</h2>
-          <strong>40% OFF</strong>
-          <span></span>
-          <a href="#" class="btn btn-lg"
-            >SHOP NOW
-            <i class="bi bi-arrow-right"></i>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!--! campaign single end-->
+    <!--! blogs end-->
 
     <!--! policy start-->
     <section class="policy">
@@ -765,7 +502,7 @@
               </div>
               <div class="footer-contact">
                 <p>
-                  <a href="tel:555 555 55 55">(+800) 1234 5678 90</a> –
+                  <a href="tel:555 555 55 55">(+800) 1234 5678 90</a> – 
                   <a href="mailto:info@example.com">info@example.com</a>
                 </p>
               </div>
@@ -857,13 +594,10 @@
         <div class="container">
           <div class="footer-copyright">
             <div class="site-copyright">
-              <p>
-                Copyright 2022 © E-Commerce Theme. All right reserved. Powered
-                by Emin Basbayan.
-              </p>
+              <p>Copyright 2022 © E-Commerce Theme. All right reserved. Powered by Emin Basbayan.</p>
             </div>
             <a href="">
-              <img src="img/footer/cards.png" alt="" />
+              <img src="img/footer/cards.png" alt="">
             </a>
             <div class="footer-menu">
               <ul class="footer-menu-list">
@@ -879,6 +613,7 @@
               </ul>
             </div>
           </div>
+
         </div>
       </div>
     </footer>
