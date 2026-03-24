@@ -57,3 +57,11 @@ yoksa javasicript çalışmaz hata verir
 PAZARLAMA
 responsive var, cart kısmında scroll var
 ceo için h1 etiketi kullanımı
+
+EKLENEN KÜTÜPHANELER
+Slider kütüphanesi:
+https://glidejs.com/docs/setup/ 
+google da yukarıdaki linke girip CDN kısmında yazan;
+https://cdn.jsdelivr.net/npm/@glidejs/glide   bu linki index.html e en sona ekledik 
+https://cdnjs.com/ sitesinde aramaya glide.js yazdık. 3.6.0 versiyonu seçiliyken all yerine styling i seçtik
+https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.min.css linkini index.html de link olarak verdik

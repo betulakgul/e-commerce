@@ -33,8 +33,6 @@ const btnCloseSearch = document.getElementById("close-search"); // getElementByI
 const modalSearch = document.getElementsByClassName("modal-search"); //getElementsByClassName yazdığımız için başına . koymadık
 const modalSearchWrapper = document.getElementsByClassName("modal-wrapper");
 
-console.log(modalSearch);
-
 btnOpenSearch.addEventListener("click", function () {
   modalSearch[0].style.visibility = "visible"; //modalSearch bize array döndürdüğü için 0. elemanını aldık
   modalSearch[0].style.opacity = "1";
