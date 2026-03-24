@@ -63,11 +63,14 @@ document.addEventListener("click", function (e) {
 let slideIndex = 1;
 showSlides(slideIndex);
 
-setInterval(()=> {
-showSlides((slideIndex+=1));
-}, 4000)  //4 snde bir geçiş yap
+setInterval(() => {
+  showSlides((slideIndex += 1));
+}, 4000); //4 snde bir geçiş yap
 function plusSlide(n) {
   showSlides((slideIndex += n));
+}
+function currentSlide(n) {
+  showSlides((slideIndex = n));
 }
 function showSlides(n) {
   const slides = document.getElementsByClassName("slider-item");
@@ -76,16 +79,16 @@ function showSlides(n) {
   if (n > slides.length) {
     slideIndex = 1;
   }
-  if( n < 1)
-  {
+  if (n < 1) {
     slideIndex = slides.length;
   }
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
   for (let i = 0; i < dots.length; i++) {
-    slides[i].style.display = "none";
+    dots[i].className = dots[i].className.replace(" active", ""); //replace: solda yazılanı sağdaki ile değiştir yani active yazısını sil
   }
   slides[slideIndex - 1].style.display = "flex";
+  dots[slideIndex - 1].className += " active";
 }
 //! slider end
