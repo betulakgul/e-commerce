@@ -26,7 +26,7 @@
     margin-bottom: 40px;
 }
 .products .product-list{
-    display: flex;
+ /*   display: flex;
     gap: 20px;
     flex-wrap: wrap; /*sayfaya sığmayan aşağı taşsın, burada responsive ayarına gerek kalmadı*/
 }
