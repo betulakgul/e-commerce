@@ -1,4 +1,5 @@
-const config = {
+export function product1(){
+  const config = {
   type: "carousel",
   perView: 4,
   gap: 20,
@@ -18,6 +19,7 @@ const config = {
 
 new Glide(".product-carousel", config).mount();
 
+}
 const config2 = {
   type: "carousel",
   perView: 4,
