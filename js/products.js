@@ -1,33 +1,60 @@
-import { product1 } from "./glide";
+import { product1 } from "./glide.js";
 
-let products= []
-
-async function productsFunc() {
-products= (await localStorage.getItem("products"))
-? JSON.parse(localStorage.getItem("products"))
+let products = localStorage.getItem("products")
+? JSON.parse(localStorage.getItem("products")) //veri varsa döndür yoksa boş dizi döndür
 :[];
+let cart = localStorage.getItem("cart") ? JSON.parse(localStorage.getItem("cart")) : [];
+
+
+
+function addToCart() {
+  const cartItems = document.querySelector(".header-cart-count");
+  const buttons = [...document.getElementsByClassName("add-to-cart")]; //array olarak foreach içinde dönebilmesi için [...] kullandık
+  buttons.forEach((button) => {
+    const inCart = cart.find((item) => item.id === Number(button.dataset.id)); //sepete ekle butonuna basarken aynı ürünün sepette olup olmadığını inCart değişkenine ata
+    if (inCart){ // inCart = true ise yani aynı ürün sepette varsa
+      button.setAttribute("disabled", "disabled"); //ve butonu disable yap
+    } else {
+       button.addEventListener("click", function (e) {
+      e.preventDefault(); /**sayfa yenilenmesin */
+      const id = e.target.dataset.id;
+      const findProduct = products.find((product) => product.id === Number(id));
+      cart.push({ ...findProduct, quantity: 1 });
+      localStorage.setItem("cart", JSON.stringify(cart));
+      button.setAttribute("disabled", "disabled"); //ürünü ekledikten sonra butonu disable yap
+      cartItems.innerHTML=cart.length;
+    });
+    }
+
+   
+  });
+}
+
+function productsFunc() {
+  
+
 const productsContainer = document.getElementById("product-list");
 
 let results="";
-products.forEach(item => {
+products.forEach((item) => {
     // `` -> , + Alt Gr
-    results+=` <li class="product-item glide__slide">   
+    results += ` <li class="product-item glide__slide">   
                 <div class="product-image">
                   <a href="#">
                     <img
-                      src="img/products/product1/1.png"
+                      src=${item.img.singleImage}
                       alt=""
                       class="img1"
                     />
                     <img
-                      src="img/products/product1/2.png"
+                      src=${item.img.thumbs[1]}
                       alt=""
                       class="img2"
                     />
                   </a>
                 </div>
                 <div class="product-info">
-                  <a href="#" class="product-title">Analogue Resin Strap</a>
+                  <a href="#" class="product-title">${item.name}</a>
                   <ul class="product-star">
                     <li>
                       <i class="bi bi-star-fill"></i>
@@ -46,14 +73,14 @@ products.forEach(item => {
                     </li>
                   </ul>
                   <div class="product-prices">
-                    <strong class="new-price">108.00$</strong>
-                    <!-- b etiketi pek önerilmiyor, onun yerine strong kullanıyoruz-->
-                    <span class="old-price">$165.00</span>
-                    <!-- s etiketi yaparsak üstü çizili yazar ama biz bunu css de çizecez-->
+                    <strong class="new-price">$${item.price.newPrice.toFixed(2)}</strong> 
+                   
+                    <span class="old-price">$${item.price.oldPrice.toFixed(2)}</span>
+                   
                   </div>
-                  <span class="product-discount">-17%</span>
+                  <span class="product-discount">-${item.discount}%</span>
                   <div class="product-links">
-                    <button>
+                    <button class="add-to-cart" data-id=${item.id}>
                       <i class="bi bi-basket-fill"></i>
                     </button>
                     <button>
@@ -68,8 +95,11 @@ products.forEach(item => {
                   </div>
                 </div>
               </li>`  ;
-              productsContainer.innerHTML=results;
+                productsContainer ? (productsContainer.innerHTML=results) : ""; //  productsContainer varsa results al, yoksa boş
+              addToCart();
 });
 product1();
+
 }
-export default productsFunc();
+export default productsFunc;
+
