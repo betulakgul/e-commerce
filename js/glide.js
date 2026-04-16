@@ -47,3 +47,19 @@ export function product1() {
 
   productsContainer && new Glide(".product-carousel2", config2).mount();
 
+export function singleThumbs(){
+  const config3 = {
+  perView: 5,
+  breakpoints: {
+    992: {
+      perView: 3,
+    }
+  },
+};
+
+
+if (document.querySelector('.product-thumb')) {
+  new Glide('.product-thumb',config3).mount();
+}
+
+}
