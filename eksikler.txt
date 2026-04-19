@@ -1,0 +1,6 @@
+sepette ürünü artırma azaltma
+anasayfada ürünü bi kere ekleyince bi daha eklememe?
+ürün ayrıntı sayfasında ürün sepetteyse bir daha sepete eklememe?
+sepetteki ürüne tıklayıp gidebilme
+renk ve beden seçimi sepet bilgilerine eklenmedi
+ürüne yorum ekleme kısmında yıldız ve tarih bilgisi eklenecek

@@ -26,6 +26,7 @@ function displayCartProduct() {
 }
 displayCartProduct();
 
+
 function removeCartItem() {
   const btnDeleteCart = document.querySelectorAll(".delete-cart");
   let cartItems = document.querySelector(".header-cart-count");

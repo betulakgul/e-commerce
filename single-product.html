@@ -389,8 +389,9 @@
                       </div>
                     </div>
                     <div class="cart-button">
-                      <input type="number" value="1" min="1" />
-                      <button class="btn btn-lg btn-primary">
+                      <input type="number" value="1" min="1" id="quantity"/>
+                      <button class="btn btn-lg btn-primary" id="add-to-cart" type="button"> 
+                        <!--type="button" eklersek butona bastığımızda sayfa yenilenmemiş olur, buradaki yapı formun içinde olduğu için butona bastığımızda yenileme işlemi yapar-->
                         Add to cart
                       </button>
                     </div>
@@ -436,17 +437,17 @@
           <div class="single-tabs">
             <ul class="tab-list">
               <li>
-                <a href="" class="tab-button active">Description</a>
+                <a href="" class="tab-button active" data-id="desc">Description</a>
               </li>
               <li>
-                <a href="" class="tab-button">Additional information</a>
+                <a href="" class="tab-button" data-id="info">Additional information</a>
               </li>
               <li>
-                <a href="" class="tab-button">Reviews</a>
+                <a href="" class="tab-button" data-id="reviews">Reviews</a>
               </li>
             </ul>
             <div class="tab-panel">
-              <div class="tab-panel-descriptions">
+              <div class="tab-panel-descriptions content" id="desc">
                 <p>
                   Quisque varius diam vel metus mattis, id aliquam diam rhoncus.
                   Proin vitae magna in dui finibus malesuada et at nulla. Morbi
@@ -469,7 +470,7 @@
                   vel ornare vel, dignissim a tortor.
                 </p>
               </div>
-              <div class="tab-panel-information">
+              <div class="tab-panel-information content" id="info">
                 <h3>Additional information</h3>
                 <table>
                   <tbody>
@@ -493,7 +494,7 @@
                   </tbody>
                 </table>
               </div>
-              <div class="tab-panel-reviews">
+              <div class="tab-panel-reviews content active" id="reviews">
                 <h3>
                   2 reviews for Basic Colored Sweatpants With Elastic Hems
                 </h3>
@@ -601,14 +602,14 @@
                         Your review
                         <span class="required">*</span>
                       </label>
-                      <textarea id="comment" cols="50" rows="10"></textarea>
+                      <textarea id="comment-text" cols="50" rows="10"></textarea>
                     </div>
                     <div class="comment-form-author form-comment">
                       <label for="name">
                         Name
                         <span class="required">*</span>
                       </label>
-                      <input id="name" type="text" />
+                      <input id="comment-name" type="text" />
                     </div>
                     <div class="comment-form-email form-comment">
                       <label for="email">
@@ -618,7 +619,7 @@
                       <input id="email" type="email" />
                     </div>
                     <div class="comment-form-cookies">
-                      <input id="cookies" type="checkbox" />
+                      <input id="cookies" name="cookies" type="checkbox" />
                       <label for="cookies">
                         Save my name, email, and website in this browser for the
                         next time I comment.
